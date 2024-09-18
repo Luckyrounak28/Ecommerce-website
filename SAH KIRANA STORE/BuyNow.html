@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now</title>
+</head>
+<body>
+    <h1>Buy Now</h1>
+    <div id="product-details">
+        <h2>Product: <span id="product-name"></span></h2>
+        <p>Price: ₹<span id="product-price"></span></p>
+        <p>Quantity: <span id="product-quantity"></span></p>
+    </div>
+
+    <script>
+        // Function to get query parameter values
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Set the product details on the Buy Now page
+        document.getElementById('product-name').textContent = getQueryParam('product');
+        document.getElementById('product-price').textContent = getQueryParam('price');
+        document.getElementById('product-quantity').textContent = getQueryParam('quantity');
+    </script>
+</body>
+</html>

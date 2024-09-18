@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - SAH KIRANA STORE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SAH KIRANA STORE</h1>
+        <nav>
+            <a href="Index.html">Home</a>
+            <a href="SARASWATI AQUA NEER/index.html">Order water</a>
+            <a href="cart.html">
+                Cart
+                <span id="cart-notification" class="notification">0</span>
+            </a>
+            <a href="checkout.html">Checkout</a>
+        </nav>
+        <!-- Search bar added here -->
+        <form id="search-form" action="#" onsubmit="searchProduct(); return false;">
+            <input type="text" id="search-input" placeholder="Search for products...">
+            <button type="submit">Search</button>
+        </form>
+    </header>
+    
+    <main>
+        <section id="checkout">
+            <h2>Checkout</h2>
+            <form id="checkout-form" action="checkout.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <input type="hidden" id="cart-data" name="cart-data">
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 SAH KIRANA STORE</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
